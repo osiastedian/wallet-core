@@ -17,8 +17,8 @@
 #include "Cardano/AddressV3.h"
 #include "Cosmos/Address.h"
 #include "Decred/Address.h"
-#include "Ethereum/Address.h"
 #include "Elrond/Address.h"
+#include "Ethereum/Address.h"
 #include "Kusama/Address.h"
 #include "NEAR/Address.h"
 #include "NEO/Address.h"
@@ -129,7 +129,8 @@ class AnyAddress {
         case TWCoinTypeCronosChain:
         case TWCoinTypeSmartBitcoinCash:
         case TWCoinTypeKuCoinCommunityChain:
-        case TWCoinTypeBoba: {
+        case TWCoinTypeBoba:
+        case TWCoinTypeSysNEVM: {
             const auto addr = Ethereum::Address(string);
             return {addr.bytes.begin(), addr.bytes.end()};
         }

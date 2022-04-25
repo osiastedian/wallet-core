@@ -14,21 +14,21 @@
 
 
 TEST(TWSysNEVMCoinType, TWCoinType) {
-    auto symbol = WRAPS(TWCoinTypeConfigurationGetSymbol(TWCoinTypeSysNEVM));
+    auto symbol = WRAPS(TWCoinTypeConfigurationGetSymbol(TWCoinTypeSyscoinNEVM));
     auto txId = WRAPS(TWStringCreateWithUTF8Bytes("0xec584319108fad9d5960b42f3ae9f593f78a3ff83e5b13f1b1436aac39b45ef6"));
-    auto txUrl = WRAPS(TWCoinTypeConfigurationGetTransactionURL(TWCoinTypeSysNEVM, txId.get()));
+    auto txUrl = WRAPS(TWCoinTypeConfigurationGetTransactionURL(TWCoinTypeSyscoinNEVM, txId.get()));
     auto accId = WRAPS(TWStringCreateWithUTF8Bytes("0xd087fc159c508208b528e1a1f4dc720072cb34ae"));
-    auto accUrl = WRAPS(TWCoinTypeConfigurationGetAccountURL(TWCoinTypeSysNEVM, accId.get()));
-    auto id = WRAPS(TWCoinTypeConfigurationGetID(TWCoinTypeSysNEVM));
-    auto name = WRAPS(TWCoinTypeConfigurationGetName(TWCoinTypeSysNEVM));
+    auto accUrl = WRAPS(TWCoinTypeConfigurationGetAccountURL(TWCoinTypeSyscoinNEVM, accId.get()));
+    auto id = WRAPS(TWCoinTypeConfigurationGetID(TWCoinTypeSyscoinNEVM));
+    auto name = WRAPS(TWCoinTypeConfigurationGetName(TWCoinTypeSyscoinNEVM));
 
-    ASSERT_EQ(TWCoinTypeConfigurationGetDecimals(TWCoinTypeSysNEVM), 18);
-    ASSERT_EQ(TWBlockchainEthereum, TWCoinTypeBlockchain(TWCoinTypeSysNEVM));
-    ASSERT_EQ(0x0, TWCoinTypeP2shPrefix(TWCoinTypeSysNEVM));
-    ASSERT_EQ(0x0, TWCoinTypeStaticPrefix(TWCoinTypeSysNEVM));
+    ASSERT_EQ(TWCoinTypeConfigurationGetDecimals(TWCoinTypeSyscoinNEVM), 18);
+    ASSERT_EQ(TWBlockchainEthereum, TWCoinTypeBlockchain(TWCoinTypeSyscoinNEVM));
+    ASSERT_EQ(0x0, TWCoinTypeP2shPrefix(TWCoinTypeSyscoinNEVM));
+    ASSERT_EQ(0x0, TWCoinTypeStaticPrefix(TWCoinTypeSyscoinNEVM));
     assertStringsEqual(symbol, "SYS");
     assertStringsEqual(txUrl, "https://explorer.syscoin.org//tx/0xec584319108fad9d5960b42f3ae9f593f78a3ff83e5b13f1b1436aac39b45ef6");
     assertStringsEqual(accUrl, "https://explorer.syscoin.org//address/0xd087fc159c508208b528e1a1f4dc720072cb34ae");
     assertStringsEqual(id, "sysnevm");
-    assertStringsEqual(name, "SysNEVM");
+    assertStringsEqual(name, "Syscoin NEVM");
 }

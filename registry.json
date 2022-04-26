@@ -1990,5 +1990,36 @@
       "rpc": "https://rpc.syscoin.org",
       "documentation": "https://docs.syscoin.org/"
     }
+  },
+  {
+    "id": "syscoin",
+    "name": "Syscoin",
+    "coinId": 10000290,
+    "symbol": "SYS",
+    "decimals": 8,
+    "blockchain": "Bitcoin",
+    "derivationPath": "m/84'/2'/0'/0/0",
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "p2pkhPrefix": 48,
+    "p2shPrefix": 50,
+    "hrp": "sys",
+    "publicKeyHasher": "sha256ripemd",
+    "base58Hasher": "sha256d",
+    "xpub": "zpub",
+    "xprv": "zprv",
+    "explorer": {
+      "url": "https://chainz.cryptoid.info/sys/",
+      "txPath": "tx.dws?",
+      "accountPath": "address.dws?",
+      "sampleTx": "2219d15f7da08a7a7e5fb63d6059eb93a4ac442c2ee7747db0807d9594d0e638",
+      "sampleAccount": "sys1qfqz5a3wegq4kwpg6kulletev3fnednvqyr93d9"
+    },
+    "info": {
+      "url": "https://syscoin.org/",
+      "source": "https://github.com/syscoin/syscoin",
+      "rpc": "",
+      "documentation": "https://docs.syscoin.org/"
+    }
   }
 ]

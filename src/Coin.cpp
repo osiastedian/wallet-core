@@ -52,6 +52,7 @@
 #include "Waves/Entry.h"
 #include "Zcash/Entry.h"
 #include "Zilliqa/Entry.h"
+#include "Syscoin/Entry.h"
 // end_of_coin_includes_marker_do_not_modify
 
 using namespace TW;
@@ -97,6 +98,7 @@ VeChain::Entry vechainDP;
 Waves::Entry wavesDP;
 Zcash::Entry zcashDP;
 Zilliqa::Entry zilliqaDP;
+Syscoin::Entry SyscoinDP;
 // end_of_coin_dipatcher_declarations_marker_do_not_modify
 
 CoinEntry* coinDispatcher(TWCoinType coinType) {
@@ -185,6 +187,7 @@ CoinEntry* coinDispatcher(TWCoinType coinType) {
         case TWCoinTypeKuCoinCommunityChain: entry = &ethereumDP; break;
         case TWCoinTypeBoba: entry = &ethereumDP; break;
         case TWCoinTypeSyscoinNEVM: entry = &ethereumDP; break;
+        case TWCoinTypeSyscoin: entry = &SyscoinDP; break;
         // end_of_coin_dipatcher_switch_marker_do_not_modify
 
         default: entry = nullptr; break;
